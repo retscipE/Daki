@@ -1,4 +1,4 @@
-import { CommandCategory } from "tscmdhandler";
+import { CommandCategory } from "tshandler";
 
 import ping from './ping'
 

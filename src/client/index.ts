@@ -1,9 +1,10 @@
 import { Client, GatewayIntentBits, Partials } from 'discord.js'
-import { CommandClient } from 'tscmdhandler'
+import { CommandClient } from 'tshandler'
 import { registerEvents } from '../utils'
 import events from '../events'
-import categories from '../commands'
 import keys from '../keys'
+
+import Utility from '../commands/Utility'
 
 const djsClient = new Client({
     intents: [
@@ -25,7 +26,9 @@ const client = new CommandClient({
 });
 
 (async () => {
-    await client.registerCategories(categories, "false")
+    await client.registerCategories([
+        Utility,
+    ], "false")
     await client.run()
         .catch((error) => {
             console.log('[Login Error] ', error);

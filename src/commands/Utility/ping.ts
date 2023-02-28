@@ -1,4 +1,4 @@
-import { createCommand } from 'tscmdhandler'
+import { createCommand } from 'tshandler'
 import { SlashCommandBuilder } from 'discord.js'
 
 const meta = new SlashCommandBuilder()
